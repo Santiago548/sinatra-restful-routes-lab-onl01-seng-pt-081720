@@ -1,5 +1,9 @@
-<% @recipe.each do |r|%>
-<%= r.name %>
-<%= r.cook_time %>
-<%= r.ingredients %>
-<% end %>
+
+Name: <%= @recipe.name %>
+ingredients:<%= @recipe.ingredients %>
+Cook time: <%= @recipe.cook_time %>
+
+<form method="POST" action="/recipes/<%=@recipe.id%>">
+  <input type="hidden" name="_method" value="DELETE" />
+  <input type="submit" value="delete" />
+</form>
