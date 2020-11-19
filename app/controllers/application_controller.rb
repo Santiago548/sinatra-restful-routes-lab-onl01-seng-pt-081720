@@ -9,6 +9,10 @@ class ApplicationController < Sinatra::Base
     erb :new
   end
 
+  post '/recipes' do
+
+  end
+
   get '/recipes' do
     @recipes = Recipe.all
     erb :index
@@ -16,6 +20,7 @@ class ApplicationController < Sinatra::Base
 
   get '/recipes/:id' do
     @recipe = Recipe.find_by_id(params[:id])
+    erb :show
   end
 
 
