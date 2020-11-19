@@ -1,5 +1,7 @@
-<% @recipes.each do |r|%>
-<%= r.name %>
-<%= r.cook_time %>
-<%= r.ingredients %>
+<h1>Article Index</h1>
+<ul>
+<% @articles.each do |art| %>
+<h2><%= art.title %></h2>
+<li><%= art.content %></li>
 <% end %>
+</ul>
